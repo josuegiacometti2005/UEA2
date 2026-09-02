@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore</title>
+<!-- bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<link href="css/style.css" rel="stylesheet">
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!--JavaScript-->
+<script src="js/script.js"></script>
+  </head>
+  <body>
+<!--Barra de navegação superior-->
+<nav class="navbar navbar-dark bg-dark sticky-top">
+<div class="container-fluid d-flex flex-wrap align-items-center">
+<!--Botão categorias-->
+<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategorias">≡</button>
+<!--Nome site-->
+<a class="navbar-brand fw-bold fs-1 me-auto" href="#">TechStore👨‍💻</a>
+<form class="d-flex mx-auto search-form">
+<!--Barra de buscar produtos-->
+<div class="input-group">
+  <input class="form-control form-control-lg search-input" type="search" placeholder="Buscar produtos...">
+<!--Botão lupa buscar-->
+<button class="btn btn-light btn-lg" type="submit">🔍</button>
+</div>
+</form>
+<div class="d-flex align-items-center text-white ms-auto fs-6 top-links-group">
+<span class="me-4 top-link" style="cursor: pointer;">📍 Informe seu CEP</span>
+<a href="#" class="text-white text-decoration-none me-4 top-link">👤 Entrar/Cadastrar-se</a>
+<a href="#" class="text-white text-decoration-none me-3 top-link">
+    🛒 Carrinho (<span id="cart-count">0</span>)
+</a>
+</div>
+</div>
+</nav>
+<!--Barra categorias central-->
+<nav id="menu-categorias" class="navbar navbar-light border-bottom menu-categorias">
+  <div class="container-fluid justify-content-center">
+<!--Menu categorias central-->
+    <ul class="nav nav-underline flex-wrap justify-content-center">
+      <li class="nav-item"><a class="nav-link active fw-bold px-3" href="#">Ofertas do Dia</a></li>
+      <li class="nav-item"><a class="nav-link px-3" href="#">Mais Vendidos</a></li>
+      <li class="nav-item"><a class="nav-link px-3" href="#">Novidades</a></li>
+      <li class="nav-item"><a class="nav-link px-3" href="#">Promoções</a></li>
+      <li class="nav-item"><a class="nav-link px-3" href="#">Cupons</a></li>
+    </ul>
+  </div>
+</nav>
+<!--Menu categorias lateral-->
+<div class="offcanvas offcanvas-start" id="offcanvasCategorias">
+  <div class="offcanvas-header">
+    <h5>Categorias</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-unstyled">
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">📱 Smartphones</a></li>
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">💻 Notebooks</a></li>
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">🖥️ Computadores</a></li>
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">🖥️ Monitores</a></li>
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">🖱️ Acessórios</a></li>
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">🎧 Fones de Ouvido</a></li>
+<li><a href="#" class="offcanvas-link d-block p-2 text-dark text-decoration-none">🎮 Video Games</a></li>
+    </ul>
+  </div>
+</div>
+  <!--Produtos-->
+  <div class="container mt-4 mb-5">
+    <div class="row g-4">
+
+      <!--Produto 1-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 position-relative">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">-12%</span>
+          <img src="img/acer_aspire5.png" class="card-img-top" alt="Notebook Acer Aspire 5">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Notebook Acer Aspire 5</h5>
+            <p class="card-text">8GB RAM, SSD 512GB, Intel Core I5.</p>
+            <div class="mt-auto">
+            <p class="mb-1"><span class="text-muted text-decoration-line-through">R$ 3.999,00</span></p>
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 3.499,00</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐</span><span class="text-muted small">(67)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 10x de R$ 349,90 sem juros</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 2-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 position-relative">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">-17%</span>
+          <img src="img/samsung_galaxy_book4.png" class="card-img-top" alt="Notebook Samsung Galaxy Book4">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Notebook Samsung Galaxy Book4</h5>
+            <p class="card-text">16GB RAM, SSD 512GB, Intel Core I5.</p>
+            <div class="mt-auto">
+            <p class="mb-1"><span class="text-muted text-decoration-line-through">R$ 4.799,00</span></p>
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 3.999,00</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐⭐</span><span class="text-muted small">(28)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 10x de R$ 399,90 sem juros</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 3-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 position-relative">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">-15%</span>
+          <img src="img/jbl_tune_510bt.webp" class="card-img-top" alt="Fone JBL Tune 510BT">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Fone JBL Tune 510BT</h5>
+            <p class="card-text">Bluetooth, com microfone, até 40h de bateria.</p>
+            <div class="mt-auto">
+            <p class="mb-1"><span class="text-muted text-decoration-line-through">R$ 259,90</span></p>
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 219,90</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐</span><span class="text-muted small">(154)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 6x de R$ 36,65 sem juros</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 4-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="img/iphone_17_pro_silver.png" class="card-img-top" alt="Apple iPhone 17 Pro">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Apple iPhone 17 Pro</h5>
+            <p class="card-text">5g, 512GB, Tela 6,3", câmera tripla.</p>
+            <div class="mt-auto">
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 12.899,00</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐⭐</span><span class="text-muted small">(312)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 12x de R$ 1.208,25</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 5-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 position-relative">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">-12%</span>
+          <img src="img/lg_ultragear.png" class="card-img-top" alt="Monitor Gamer LG UltraGear">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Monitor Gamer LG UltraGear</h5>
+            <p class="card-text">27", FHD, 180Hz, IPS, DP e HDMI, HDR10, FreeSync, G-Sync.</p>
+            <div class="mt-auto">
+            <p class="mb-1"><span class="text-muted text-decoration-line-through">R$ 1.099,00</span></p>
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 959,00</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐</span><span class="text-muted small">(89)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 10x de R$ 95,90 sem juros</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 6-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="img/redragon_m711.avif" class="card-img-top" alt="Mouse Gamer Redragon Cobra M711">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Mouse Gamer Redragon Cobra M711</h5>
+            <p class="card-text">Chroma RGB, 12400 DPI, 8 Botões, Preto.</p>
+            <div class="mt-auto">
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 89,90</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐</span><span class="text-muted small">(43)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 3x de R$ 29,97 sem juros</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 7-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100 position-relative">
+          <span class="badge bg-danger position-absolute top-0 end-0 m-2">-17%</span>
+          <img src="img/redragon_k599_kns.webp" class="card-img-top" alt="Teclado Mecânico Gamer Redragon Deimos K599-KNS">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Teclado Mecânico Gamer Redragon Deimos Switch Marrom K599-KNS</h5>
+            <p class="card-text">Iluminação RGB personalizável, Wireless, Abnt2.</p>
+            <div class="mt-auto">
+            <p class="mb-1"><span class="text-muted text-decoration-line-through">R$ 459,90</span></p>
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 379,90</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐</span><span class="text-muted small">(76)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 10x de R$ 37,99 sem juros</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Produto 8-->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="img/ps5_joystick.webp" class="card-img-top" alt="Controle DualSense PS5">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Controle sem Fio DualSense PS5 Sony PlayStation Branco</h5>
+            <p class="card-text">Gatilhos adaptáveis, resposta tátil avançada, com microfone.</p>
+            <div class="mt-auto">
+                              <p class="fw-bold text-success fs-5 mb-1">R$ 409,00</p>
+                <div class="mb-1">
+                  <span class="text-warning">⭐⭐⭐⭐⭐</span><span class="text-muted small">(201)</span>
+                </div>
+              <p class="text-muted small mb-2">ou 12x de R$ 38,25</p>
+              <div class="d-grid gap-2">
+              <a href="#" class="btn btn-primary btn-lg">Comprar</a>
+              <a href="#" class="btn btn-outline-primary add-cart">Adicionar ao Carrinho</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

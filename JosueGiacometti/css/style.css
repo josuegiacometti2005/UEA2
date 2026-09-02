@@ -1,0 +1,109 @@
+/*Background*/
+body {
+  background-color: #ededed;
+}
+
+/* Imagem dos produtos desktop */
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Imagem dos produtos tablet */
+@media (max-width: 1199.98px) {
+  .card-img-top {
+    height: 220px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 0.5rem;
+  }
+}
+
+/* Imagem dos produtos celular */
+@media (max-width: 767.98px) {
+  .card-img-top {
+    height: 180px;
+  }
+}
+
+/* Navbar celular/tablet */
+@media (max-width: 1366.98px) {
+  .navbar-brand {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0 !important;
+  }
+  /* Tamanho barra de busca */
+  .search-form {
+    order: 3;
+    width: 100%;
+    margin: 0.5rem 0 !important;
+  }
+  /* Barra menu cadastros */
+  .top-links-group {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 !important;
+    gap: 0.5rem 1rem;
+  }
+  .top-links-group span,
+  .top-links-group a {
+    margin: 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .navbar > .container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Levantar ao passar mouse */
+.card {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Barra de categorias central com gradiente de fundo */
+.menu-categorias {
+  background: linear-gradient(to bottom, #242424, #ededed);
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+.menu-categorias .nav-link {
+  font-size: 1.1rem;
+  color: #212529;
+}
+
+/* Barra de busca */
+.search-input {
+  font-size: 1rem;
+}
+
+
+.search-form {
+  flex: 1 1 auto;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+/* Opacidade menu lateral */
+.offcanvas-link:hover {
+  background-color: #e9ecef;
+  border-radius: 6px;
+}
+
+/* Opacidade menu cadastros */
+.top-link {
+  transition: opacity 0.2s ease;
+}
+.top-link:hover {
+  opacity: 0.7;
+}
