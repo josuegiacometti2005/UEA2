@@ -10,8 +10,14 @@ $(document).ready(function () {
         quantidadeCarrinho++;
 
         $("#cart-count").text(quantidadeCarrinho);
-    });
 
+        $("#mensagem-jquery")
+            .stop(true, true)
+            .hide()
+            .fadeIn(400)
+            .delay(1000)
+            .fadeOut(500);
+    });
 
     $(".card").on("mouseenter", function () {
         $(this).addClass("jquery-hover");
@@ -20,7 +26,6 @@ $(document).ready(function () {
     $(".card").on("mouseleave", function () {
         $(this).removeClass("jquery-hover");
     });
-
 
     $(window).on("scroll", function () {
 
