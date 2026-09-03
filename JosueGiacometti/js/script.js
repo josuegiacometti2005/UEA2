@@ -30,11 +30,23 @@ $(document).ready(function () {
     $(window).on("scroll", function () {
 
         if ($(window).scrollTop() > 100) {
-            $("#menu-categorias").addClass("menu-scroll");
+            $("#barra-superior").addClass("menu-scroll");
         } else {
-            $("#menu-categorias").removeClass("menu-scroll");
+            $("#barra-superior").removeClass("menu-scroll");
         }
 
+    });
+
+    $("#menu-categorias .nav-link").on("click", function (event) {
+        event.preventDefault();
+
+        $("#mensagem-jquery")
+            .text("Categoria selecionada!")
+            .stop(true, true)
+            .hide()
+            .slideDown(400)
+            .delay(1000)
+            .slideUp(400);
     });
 
 });
